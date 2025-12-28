@@ -1,7 +1,6 @@
 import  { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
@@ -12,36 +11,20 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_axbtt7a",  
-        "template_1ziboq3", 
+        "",  
+        "", 
         form.current,
-        "Rz7W9pVF0HdDryNNL"
+        ""
       )
       .then(
         () => {
           setIsSent(true);
           form.current.reset(); 
-          toast.success("Message sent successfully! ✅", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
+          toast.success("Message sent successfully! ✅");
         },
         (error) => {
           console.error("Error sending message:", error);
-          toast.error("Failed to send message. Please try again.", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
+          toast.error("Failed to send message. Please try again.");
         }
       );
   };
@@ -54,7 +37,7 @@ const Contact = () => {
       <ToastContainer />
 
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
+        <h2 className="text-3xl font-bold text-white">CONTACT</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           I’d love to hear from you—reach out for any opportunities or questions!
