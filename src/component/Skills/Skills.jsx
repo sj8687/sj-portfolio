@@ -39,7 +39,7 @@ const Skills = () => (
                             {category.skills.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-10 px-10 sm:py-2 sm:px-1 text-center"
+                                    className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-1 text-center"
                                 >
                                     <img
                                         src={skill.logo}
