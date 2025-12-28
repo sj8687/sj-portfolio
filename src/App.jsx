@@ -1,6 +1,7 @@
 import './App.css'
 import About from './component/About/About'
 import BlurBlob from './component/BlurBlob'
+import Experience from './component/Experence/Experence'
 import Navbar from './component/Navbar/Navbar'
 import Skills from './component/Skills/Skills'
 
@@ -17,6 +18,7 @@ function App() {
         <Navbar />
         <About />
         <Skills />
+        <Experience />
       </div>
 
     </div>

@@ -1,4 +1,3 @@
-// Skills Section Logo's
 import htmlLogo from './assets/tech_logo/html.png';
 import cssLogo from './assets/tech_logo/css.png';
 import sassLogo from './assets/tech_logo/sass.png';
@@ -38,8 +37,14 @@ import ArgocdLogo from './assets/tech_logo/argocd.jpg';
 import S3Logo from './assets/tech_logo/s3.png';
 import GrafanaLogo from './assets/tech_logo/grafana.jpg';
 import NewrelicLogo from './assets/tech_logo/newrelic.png';
+import ResendLogo from './assets/tech_logo/resend.webp';
+import razerpayLogo from './assets/tech_logo/razerpay.jpeg';
+import BetterAuthLogo from './assets/tech_logo/betterauth.png';
+import AuthLogo from './assets/tech_logo/auth.webp';
+import NeonLogo from './assets/tech_logo/neon.jpeg';
+import ImagekitLogo from './assets/tech_logo/imagekit.png';
 
-
+import CodeAlphaLogo from './assets/company_logo/codealpha.png';
 
 
 export const SkillsInfo = [
@@ -55,9 +60,8 @@ export const SkillsInfo = [
       { name: 'Redux', logo: reduxLogo },
       { name: 'Turborepo', logo: turborepoLogo },
       { name: 'Next JS', logo: nextjsLogo },
-      { name: 'Tailwind CSS', logo: tailwindcssLogo },
+      { name: 'Tailwind', logo: tailwindcssLogo },
       { name: 'GSAP', logo: gsapLogo },
-      { name: 'MUI', logo: materialuiLogo },
     ],
   },
   {
@@ -68,12 +72,10 @@ export const SkillsInfo = [
       { name: 'Nestjs', logo: nestjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
       { name: 'MongoDB', logo: mongodbLogo },
-      { name: 'Firebase', logo: firebaseLogo },
       { name: 'PostgreSQL', logo: postgreLogo },
       {name: 'Zod', logo:ZodLogo},
       {name: 'Prisma', logo:prismaLogo},
       {name:'Redis', logo:RedisLogo},
-      // {name:'Cloudnary', logo:CloudnaryLogo}
     ],
   },
   {
@@ -113,13 +115,15 @@ export const SkillsInfo = [
    {
     title: 'Services',
     skills: [
-      { name: 'Git', logo: gitLogo },
-      { name: 'GitHub', logo: GithubLogo },
-      { name: 'VS Code', logo: vscodeLogo },
-      { name: 'Postman', logo: postmanLogo },
-      { name: 'Compass', logo: mcLogo },
-      { name: 'Vercel', logo: vercelLogo },
-      { name: 'Render', logo: RenderLogo },
+      { name: 'Cloudnary', logo: CloudnaryLogo },
+      { name: 'Resend', logo: ResendLogo },
+      { name: 'Razerpay', logo: razerpayLogo },
+      { name: 'BetterAuth', logo: BetterAuthLogo },
+      { name: 'AuthJs', logo: AuthLogo },
+      { name: 'NeonDB', logo: NeonLogo },
+      { name: 'Imagekit', logo: ImagekitLogo },
+      { name: 'Firebase', logo: firebaseLogo },
+
     ],
   },
  
@@ -130,10 +134,10 @@ export const SkillsInfo = [
   export const experiences = [
     {
       id: 0,
-      // img: codealphaLogo,
-      role: "Fullstack Developer",
+      img: CodeAlphaLogo,
+      role: "Fullstack Developer (INTERN)",
       company: "Code Alpha",
-      date: "April 2024 - Present",
+      date: "sep 2025 - present",
       desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
       skills: [
         "HTML",
@@ -142,13 +146,16 @@ export const SkillsInfo = [
         "React JS",
         "TypeScript",
         "Node JS",
+        "Express JS",
         "Tailwind CSS",
         "MongoDb",
+        "PostgreSQL",
         "zustand",
-        " Next Js",
+        "Next Js",
         "BetterAuth"
       ],
     },
+    
    
   ];
   
