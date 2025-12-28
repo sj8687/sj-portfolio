@@ -1,9 +1,12 @@
 import './App.css'
 import About from './component/About/About'
 import BlurBlob from './component/BlurBlob'
+import Contact from './component/Contact/Contact'
+import Education from './component/Education/Education'
 import Experience from './component/Experence/Experence'
 import Navbar from './component/Navbar/Navbar'
 import Skills from './component/Skills/Skills'
+import Work from './component/Work/Work'
 
 function App() {
 
@@ -19,6 +22,9 @@ function App() {
         <About />
         <Skills />
         <Experience />
+        <Work />
+        <Education />
+        <Contact />
       </div>
 
     </div>
