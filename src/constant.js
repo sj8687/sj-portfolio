@@ -50,7 +50,7 @@ import SvpmLogo from './assets/education_logo/svpm.webp';
 import VirajHallLogo from './assets/work_logo/viraj.png';
 import minLogo from './assets/work_logo/10min.png';
 import SplytLogo from './assets/work_logo/splyt.png';
-import ToteLogo from './assets/work_logo/tote.png';
+import ToteLogo from './assets/work_logo/Tote.png';
 
 
 export const SkillsInfo = [
