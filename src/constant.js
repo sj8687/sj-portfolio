@@ -202,7 +202,7 @@ export const SkillsInfo = [
       id: 0,
       title: "Viraj Multipurpose Hall",
       description:
-        "Viraj Multipurpose Hall is a full-stack web application designed to manage event hall bookings in a simple, secure, and user-friendly way.The application allows customers to check hall availability, book dates for events such as weddings, birthdays, and receptions, and complete payments online. It also provides a powerful admin dashboard to manage all bookings efficiently.",
+        "Viraj Multipurpose Hall is a full-stack web application designed to manage event hall bookings secure, and user-friendly way.",
       image: VirajHallLogo,
       tags: ["Turborepo", "TailwindCSS", "Express js", "Postgres","Cloudnary","FireBase","Zustand","Resend", "AWS", "Docker", "Kubernetes","Authjs","TS","Zod","GSAP"],
       github: "https://github.com/sj8687/viraj-hall-docker-aws",
