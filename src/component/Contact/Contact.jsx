@@ -46,7 +46,7 @@ const Contact = () => {
 
       <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
         <h3 className="text-xl font-semibold text-white text-center">
-          Connect With Me <span className="ml-1">🚀</span>
+          Connect With Me
         </h3>
 
         <form ref={form} onSubmit={sendEmail} className="mt-4 flex flex-col space-y-4">
@@ -81,7 +81,7 @@ const Contact = () => {
           
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
+            className="w-full bg-gradient-to-r bg-[#321bb3] py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
           >
             Send
           </button>
