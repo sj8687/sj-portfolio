@@ -19,7 +19,7 @@ const About = () => {
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight ">
             <span className="text-white">I am a </span>
             <Typewriter
-              words={['Fullstack Developer', 'Devops Engineer(aws)', 'UI/UX Designer', 'Coder']}
+              words={['Fullstack Developer', 'Devops Engineer(aws)','Freelancer', 'UI/UX Designer', 'Coder']}
               loop={5}
               cursor
               cursorStyle="|"
