@@ -42,7 +42,7 @@ import BetterAuthLogo from './assets/tech_logo/betterauth.png';
 import AuthLogo from './assets/tech_logo/auth.webp';
 import NeonLogo from './assets/tech_logo/neon.jpeg';
 import ImagekitLogo from './assets/tech_logo/imagekit.png';
-import PrometheusLOgo from './assets/tech_logo/Prometheus.webp'
+import PrometheusLOgo from './assets/tech_logo/prometheus.webp'
 
 import CodeAlphaLogo from './assets/company_logo/codeAlpha.png';
 
