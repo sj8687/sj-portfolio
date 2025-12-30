@@ -42,6 +42,7 @@ import BetterAuthLogo from './assets/tech_logo/betterauth.png';
 import AuthLogo from './assets/tech_logo/auth.webp';
 import NeonLogo from './assets/tech_logo/neon.jpeg';
 import ImagekitLogo from './assets/tech_logo/imagekit.png';
+import PrometheusLOgo from './assets/tech_logo/Prometheus.webp'
 
 import CodeAlphaLogo from './assets/company_logo/codeAlpha.png';
 
@@ -90,7 +91,7 @@ export const SkillsInfo = [
       { name: 'C', logo: cLogo },
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'TypeScript', logo: typescriptLogo },
-      {name: 'Nodejs', logo: nodejsLogo},
+      {name: 'Nodejs(RTE)', logo: nodejsLogo},
     ],
   },
    {
@@ -104,6 +105,7 @@ export const SkillsInfo = [
       { name: 'S3', logo: S3Logo },
       { name: 'Grafana', logo: GrafanaLogo },
       { name: 'Newrelic', logo: NewrelicLogo },
+      {name: 'Prometheus', logo: PrometheusLOgo }
     ],
   },
   {
