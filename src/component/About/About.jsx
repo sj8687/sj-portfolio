@@ -1,7 +1,7 @@
 
 export function About() {
   return (
-    <section className="relative max-w-5xl  mx-auto px-4 sm:px-8 pt-40 pb-24 text-center">
+    <section  id="about" className="relative max-w-5xl  mx-auto px-4 sm:px-8 pt-40 pb-24 text-center">
       <h1
   style={{ fontFamily: 'EB Garamond, serif' }}
   className="text-[clamp(3.5rem,8vw,6rem)] leading-[1.1] "

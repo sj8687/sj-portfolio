@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
-    <section className="py-28 px-6 md:px-10 lg:px-16 flex justify-center ">
+    <section id="experience" className="py-28 px-6 md:px-10 lg:px-16 flex justify-center ">
       <div className="w-full rounded-3xl p-12 md:p-16 ">
         
         <div className="text-center mb-16">

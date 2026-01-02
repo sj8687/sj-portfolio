@@ -2,7 +2,7 @@ import { SkillsInfo } from "../../constant";
 import { motion } from "framer-motion";
 
 const Skills = () => (
-  <section className="py-28">
+  <section  id="skills" className="py-28">
     <div
       className="w-full bg-[#111214] rounded-3xl p-10 md:p-16
                  shadow-[0_0_30px_rgba(14,111,92,0.2)]"
