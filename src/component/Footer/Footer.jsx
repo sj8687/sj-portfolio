@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
       <div className="container mx-auto text-center">
         
-        <div className="flex flex-wrap justify-center space-x-4 mt-6">
+        <div className="flex text-gray-500 flex-wrap justify-center space-x-4 mt-6">
           {[
             { icon: <FaFacebook />, link: "https://www.facebook.comsj/" },
             { icon: <FaTwitter />, link: "https://x.com/shreyash744" },
