@@ -48,7 +48,7 @@ export function Navbar() {
 
   return (
     <header style={{fontFamily: 'Poppins, sans-serif'}} className="fixed top-0 w-full z-50 px-4 sm:px-8 py-4">
-      <div className="max-w-5xl  mx-auto flex items-center justify-between border border-neutral-200 rounded-xl px-4 sm:px-6 py-5 bg-[#FBF9EE]/80 backdrop-blur-md">
+      <div className="max-w-5xl  mx-auto flex items-center justify-between border border-neutral-300  rounded-xl px-4 sm:px-6 py-5 bg-[#FBF9EE]/80 backdrop-blur-md">
         
         <div
           onClick={() => handleNavClick("home")}
