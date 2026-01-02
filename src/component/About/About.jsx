@@ -1,61 +1,36 @@
-import profileImage from '../../assets/shreyash.jpg';
-import { Typewriter } from 'react-simple-typewriter';
 
-
-const About = () => {
+export function About() {
   return (
-    <section
-      id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[15vw] font-sans mt-16 md:mt-24 lg:mt-25"
-    >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0 space-x-2">
-          <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold text-white mb-2 leading-tight">
-            Hi, I am
-          </h1>
-          <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Shreyash Jadhav
-          </h2>
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight ">
-            <span className="text-white">I am a </span>
-            <Typewriter
-              words={['Fullstack Developer', 'Devops Engineer(aws)','Freelancer', 'UI/UX Designer', 'Coder']}
-              loop={5}
-              cursor
-              cursorStyle="|"
-              typeSpeed={100}
-              deleteSpeed={50}
-              delaySpeed={2000}
-            />
-          </h3>
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a Full-Stack Developer with over 1 year of experience in building scalable web applications. Skilled in both front-end and back-end development, Additionally, I have knowledge of DevOps practices, particularly with AWS, and am familiar with deploying, scaling, and maintaining applications on cloud platforms...
-          </p>
-          <a
-            href="https://drive.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
-            }}
-          >
-            DOWNLOAD CV
-          </a>
+    <section className="relative max-w-5xl  mx-auto px-4 sm:px-8 pt-40 pb-24 text-center">
+      <h1
+  style={{ fontFamily: 'EB Garamond, serif' }}
+  className="text-[clamp(3.5rem,8vw,6rem)] leading-[1.1] "
+>
+  <span className="text-neutral-400">I build</span>{" "}
+  <span className="text-neutral-900">modern web experiences</span>
+</h1>
 
-        </div>
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <img
-            src={profileImage}
-            alt="sj"
-            className="w-full md:h-[600px] rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
-          />
-          {/* </Tilt> */}
+
+      <p style={{fontFamily: 'Poppins, sans-serif'}}  className="mt-6 max-w-2xl mx-auto text-neutral-700 text-base sm:text-lg">
+        I’m <span className="font-medium text-neutral-900">Shreyash Jadhav</span> — an elegant
+        Full-Stack Developer crafting scalable applications, intuitive UI/UX,
+        and cloud-ready systems using modern web technologies and AWS.
+      </p>
+
+      <div style={{fontFamily: 'Poppins, sans-serif'}}  className="mt-8 flex flex-col items-center gap-3">
+        <button className="px-6 py-3 rounded-xl bg-[#E7D6FF] border border-neutral-900 font-semibold">
+          View My Work
+        </button>
+        <span className="text-sm text-neutral-500">
+          Full-Stack · DevOps (AWS) · UI/UX · Freelancer
+        </span>
+      </div>
+
+      <div style={{fontFamily: 'Poppins, sans-serif'}}  className="mt-14 flex justify-center">
+        <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#0E6F5C] text-white text-sm font-medium">
+          ✓ 1+ year building production-ready applications
         </div>
       </div>
     </section>
   );
-};
-
-export default About;
+}

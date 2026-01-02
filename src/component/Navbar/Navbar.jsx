@@ -1,14 +1,32 @@
 "use client";
+
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import {
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-  
+function NavItem({ label, sectionId, active, onClick }) {
+  return (
+    <button
+      onClick={() => onClick(sectionId)}
+      className={`flex items-center gap-2 text-[15px] font-medium transition ${
+        active
+          ? "text-[#8245ec]"
+          : "text-neutral-800 hover:opacity-70"
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
 
-  const handleMenuItemClick = (sectionId) => {
+export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  const handleNavClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
 
@@ -20,114 +38,84 @@ const Navbar = () => {
 
   const menuItems = [
     { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
-    { id: "work", label: "Projects" },
-    { id: "education", label: "Education" },
+     { id: "skills", label: "Skills" }, 
+      { id: "experience", label: "Experience" }, 
+       { id: "work", label: "Projects" }, 
+       { id: "education", label: "Education" },
+   
+   
   ];
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[15vw] bg-opacity-50 backdrop-blur-md shadow-md`}
-    >
-      <div className="text-white py-5 flex justify-between items-center">
-        <div className="text-[16px] font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Shreyash</span>
-          <span className="text-[#8245ec]">/</span>
-          <span className="text-white">Jadhav</span>
-          <span className="text-[#8245ec]">&gt;</span>
+    <header style={{fontFamily: 'Poppins, sans-serif'}} className="fixed top-0 w-full z-50 px-4 sm:px-8 py-4">
+      <div className="max-w-5xl  mx-auto flex items-center justify-between border border-neutral-200 rounded-xl px-4 sm:px-6 py-5 bg-[#FBF9EE]/80 backdrop-blur-md">
+        
+        <div
+          onClick={() => handleNavClick("home")}
+          className="flex items-center gap-2 text-[20px] font-semibold text-neutral-900 cursor-pointer"
+        >
+          <div className="w-5 h-5 flex items-center justify-center">
+            <span className="block w-1 h-4 bg-neutral-900 mr-[2px]" />
+            <span className="block w-1 h-3 bg-neutral-900 mr-[2px]" />
+          </div>
+          Sj
         </div>
 
-        <ul className="hidden md:flex text-[15px] space-x-8 text-gray-300">
+        <nav className="hidden md:flex items-center gap-6 ">
           {menuItems.map((item) => (
-            <li
+            <NavItem
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
-              }`}
-            >
-              <button onClick={() => handleMenuItemClick(item.id)}>
-                {item.label}
-              </button>
-            </li>
+              label={item.label}
+              sectionId={item.id}
+              active={activeSection === item.id}
+              onClick={handleNavClick}
+            />
           ))}
-        </ul>
+        </nav>
 
-        <div className="hidden md:flex space-x-4">
+        <div className="flex items-center gap-4">
           <a
             href="https://github.com/sj8687"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-neutral-700 hover:text-[#8245ec] transition"
           >
-            <FaGithub size={24} />
+            <FaGithub size={21} />
           </a>
+
           <a
             href="https://www.linkedin.com/in/shreyash-jadhav-4434b5285"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-neutral-700 hover:text-[#8245ec] transition"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedin size={21} />
           </a>
-        </div>
 
-
-{/* responsive for mobile */}
-        <div className="md:hidden">
-          {isOpen ? (
-            <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            />
-          ) : (
-            <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(true)}
-            />
-          )}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-neutral-900"
+          >
+            {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+          </button>
         </div>
       </div>
 
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="md:hidden mt-3 mx-4 rounded-xl border border-neutral-200 bg-[#FBF9EE] shadow-lg">
+          <nav className="flex flex-col p-4 gap-4">
             {menuItems.map((item) => (
-              <li
-                key={item.id}
-                className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
-              >
-                <button onClick={() => handleMenuItemClick(item.id)}>
-                  {item.label}
-                </button>
-              </li>
+              <NavItem
+                key={item.id}    
+                label={item.label}
+                sectionId={item.id}
+                active={activeSection === item.id}
+                onClick={handleNavClick}
+              />
             ))}
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/sj8687"
-                target="_blank"
-                // rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaGithub size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/shreyash-jadhav-4434b5285"
-                // target="_blank"
-                // rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaLinkedin size={24} />
-              </a>
-            </div>
-          </ul>
+          </nav>
         </div>
       )}
-    </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}

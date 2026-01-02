@@ -1,62 +1,64 @@
 import { SkillsInfo } from "../../constant";
-import { motion } from 'framer-motion';
-
+import { motion } from "framer-motion";
 
 const Skills = () => (
-    <section
-        id="skills"
-        className="py-24 pb-24 px-[10vw] md:px-[5vw] lg:px-[16vw] font-sans bg-skills-gradient "
+  <section className="py-28">
+    <div
+      className="w-full bg-[#111214] rounded-3xl p-10 md:p-16
+                 shadow-[0_0_30px_rgba(14,111,92,0.2)]"
     >
-        <div className="text-center mb-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-            <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-            <p className="text-gray-400 mt-4 text-[17px] font-semibold">
-                A collection of my technical skills and expertise honed through various projects and experiences
-            </p>
-        </div>
+      <div className="text-center mb-12">
+        <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white">
+          Skills & Expertise
+        </h2>
+        <div className="w-20 h-1 bg-[#0E6F5C] mx-auto mt-3 rounded-full" />
+        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          My core technical skills and tools I use to build solid products.
+        </p>
+      </div>
 
-        <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
-            {SkillsInfo.map((category) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {SkillsInfo.map((category, i) => (
+          <motion.div
+            key={category.title}
+            className="bg-[#0D0D0F] border border-[#0E6F5C]/30 rounded-2xl p-5
+                       shadow-[0_0_20px_rgba(14,111,92,0.2)]
+                       will-change-transform"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+          >
+            <h3 className="text-xl font-serif font-semibold text-gray-100 mb-5 text-center">
+              {category.title}
+            </h3>
+
+            <div className="grid grid-cols-3 gap-4">
+              {category.skills.map((skill) => (
                 <div
-                    key={category.title}
-                    className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
-          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
+                  key={skill.name}
+                  className="flex flex-col items-center bg-[#0E6F5C]/10
+                             border border-[#0E6F5C]/25 rounded-xl p-3
+                             transition-transform duration-200
+                             hover:scale-105"
                 >
-                    <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
-                        {category.title}
-                    </h3>
-
-                    <motion.div
-                        className="card"
-                        whileHover={{
-                            scale: 1.05,
-                            rotateX: 10,
-                            rotateY: 10,
-                            transition: { duration: 0.3 },
-                        }}
-                    >
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
-                            {category.skills.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-1 text-center"
-                                >
-                                    <img
-                                        src={skill.logo}
-                                        alt={`${skill.name} logo`}
-                                        className="w-5 h-6 sm:w-6 sm:h-7"
-                                    />
-                                    <span className="text-xs sm:text-sm text-gray-300">
-                                        {skill.name}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
+                  <img
+                    src={skill.logo}
+                    alt={skill.name}
+                    className="w-10 h-10 sm:w-12 sm:h-12"
+                    loading="lazy"
+                  />
+                  <span className="mt-2 text-xs sm:text-sm text-gray-200 font-medium">
+                    {skill.name}
+                  </span>
                 </div>
-            ))}
-        </div>
-    </section>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
 );
 
 export default Skills;
